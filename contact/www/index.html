@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <title>Contact</title>
+    
+</head>
+<body>
+    <!-- home page -->
+    <div id="home" data-role="page">
+        <div data-role="header">
+            <h2>Contact</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#addContact" data-role="button" data-icon="plus" data-iconpos="right">Ajouter</a>
+            
+            <ul id="contactList" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Recherche de contact">
+                <!-- Contact list items will be injected here by JavaScript -->
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h2>Master 1 IABD &copy; ESP</h2>
+        </div>
+    </div>
+    <!-- end home page -->
+    
+    <!-- detail page -->
+    <div id="detail" data-role="page">
+        <div data-role="header">
+            <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+            <a href="#editContactPage" data-icon="gear" data-iconpos="notext">Modifier</a>
+            <h2>Détails du contact</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <div id="contactDetails">
+                <!-- Contact details will be shown here -->
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>Master 1 IABD &copy; ESP</h3>
+        </div>
+    </div>
+    <!-- end detail page -->
+
+    <!-- add contact page -->
+    <div id="addContact" data-role="page">
+        <div data-role="header">
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+            <a href="#deleteContactPage" data-role="button" data-icon="delete" data-iconpos="notext" ></a>
+            <h2>Ajouter un contact</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <form id="addContactForm">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" placeholder="Prénom" >
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" placeholder="Nom">
+                <label for="telephone">Téléphone:</label>
+                <input type="tel" id="telephone" placeholder="Téléphone" >
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" >
+                <input type="submit" value="Ajouter" id="add">
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>Master 1 IABD &copy; ESP</h3>
+        </div>
+    </div>
+    <!-- end add contact page -->
+
+    <!-- delete contact page -->
+    <div id="deleteContactPage" data-role="page">
+        <div data-role="header">
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+            <h2>Supprimer un contact</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <form id="deleteContactForm">
+                <label for="deleteName">Nom du contact à supprimer:</label>
+                <input type="text" id="deleteName" placeholder="Nom du contact" required>
+                <input type="submit" value="Supprimer" id="delete">
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>Master 1 IABD &copy; ESP</h3>
+        </div>
+    </div>
+    <!-- end delete contact page -->
+
+    <!-- edit contact page -->
+    <div id="editContactPage" data-role="page">
+        <div data-role="header">
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+            <h2>Modifier un contact</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <form id="editContactForm">
+                <input type="hidden" id="editContactId">
+                <label for="editPrenom">Prénom:</label>
+                <input type="text" id="editPrenom" placeholder="Prénom" required>
+                <label for="editNom">Nom:</label>
+                <input type="text" id="editNom" placeholder="Nom" required>
+                <label for="editTelephone">Téléphone:</label>
+                <input type="tel" id="editTelephone" placeholder="Téléphone" required >
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" placeholder="Email" required>
+                <input type="submit" value="Modifier" id="update">
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>Master 1 IABD &copy; ESP</h3>
+        </div>
+    </div>
+    <!-- end edit contact page -->
+</body>
+</html>

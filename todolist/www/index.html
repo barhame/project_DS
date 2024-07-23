@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/themes/Montheme.min.css">
+    <link rel="stylesheet" href="lib/themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css">
+    <!-- <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <title>Task</title>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" id="header">
+            <h1>Gestion des Tâches</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <form action="">
+                <label for="task">Ajouter une Tache</label>
+                <input type="text" name="task" id="task" placeholder="ajouter une tache">
+                <button type="button"  onclick="ajouter();" >Ajouter</button>
+                <input type="button" value="Reinitialiser" onclick="reinitialiser();" >
+            </form>
+            <h2>Tâche encours ......</h2>
+            <ul data-role="listview" id="taskList" data-inset="true"></ul>
+            <h2>Tâche términer</h2>
+            <ul data-role="listview" id="taskListTerminer" data-inset="true"></ul>
+        </div>
+        <div data-role="footer" data-position="fixed" >
+            <h2>M1 IABD &copy; ESP</h2>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

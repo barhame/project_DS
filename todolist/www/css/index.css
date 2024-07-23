@@ -1,0 +1,47 @@
+.complet{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .9em;
+}
+.encours{
+    color: #008000;
+    font-size: .9em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    
+}
+li{
+    font-size: 0.9em;
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+}
+input{
+    font-size: 0.9em;    
+    font-family: 'Courier New', Courier, monospace;
+
+}
+h1{
+    text-decoration: underline;
+    text-shadow: none;
+}
+#header{
+    background-color:black;
+    color: white;
+    text-align: center;
+}
+#taskListTerminer{
+    color: #008000;
+}
+h2{
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+label{
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18em;
+    background-color: #008000;
+}
